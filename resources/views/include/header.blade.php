@@ -25,11 +25,11 @@
                         <i class="fas fa-tasks mr-2"></i>Conduct Audit
                     </a>
                     <ul class="collapse list-unstyled" id="conductAuditSubmenu">
-                        <li><a href="{{ url('/create') }}"><i class="fas fa-plus-circle mr-2"></i>Create Audit Checklist</a></li>
-                        <li><a href="{{ url('/update') }}"><i class="fas fa-edit mr-2"></i>Update Audit Checklist</a></li>
+                        <li><a href="{{ route('audit.create') }}"><i class="fas fa-plus-circle mr-2"></i>Create Audit Checklist</a></li>
+
+                        <li><a href="{{ route('audit.update') }}"><i class="fas fa-edit mr-2"></i>Update Audit Checklist</a></li>
                         <li><a href="#"><i class="fas fa-check-circle mr-2"></i>Verifikasi Audit Checklist</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-
