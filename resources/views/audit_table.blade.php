@@ -4,12 +4,17 @@
 @include('include.header')
 
 <div id="page-content" class="container-fluid">
-
     <div id="mainContent">
         <!-- Button Container -->
         <div class="button-container">
+            <div class="info">
+                <label>Audit Plan No:</label>
+                <input type="text" id="audit_plan" name="audit_plan" value="" class="form-control" readonly>
+                <label>Audit Checklist No:</label>
+                <input type="text" id="audit_check" name="audit_check" value="" class="form-control" readonly>
+            </div>
             <button class="btn btn-primary">Save</button>
-            <button class="btn btn-secondary">Add</button>
+            <button id="addRowBtn" class="btn btn-secondary">Add</button>
             <button class="btn btn-light">Back</button>
         </div>
 
@@ -26,33 +31,21 @@
                         <th class="table-header">Attachment</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="auditTableBody">
                     <tr>
+                        <td><input type="text" name="reference[]" class="form-control"></td>
+                        <td><input type="text" name="question[]" class="form-control"></td>
                         <td>
-                            <input type="text" id="reference" name="reference" value="" class="form-control">
-                            <!-- <select class="form-control" name="reference">
-                                    <option value="10-DP-P702">10-DP-P702</option>
-                                    <option value="10-DP-P702">10-DP-P702.03</option>
-                                    <option value="10-DP-P702">10-DP-P702.03</option>
-                                    <option value="10-DP-P702">10-DP-P702.XX</option>
-                                </select> -->
-                        </td>
-                        <td>
-                            <input type="text" id="question" name="question" value="" class="form-control">
-                        </td>
-                        <td>
-                            <select class="form-control">
+                            <select name="findings[]" class="form-control">
                                 <option value="COMPLIANT">COMPLIANT</option>
                                 <option value="NON-COMPLIANT">OFI</option>
                                 <option value="PENDING">MAJOR NC</option>
                                 <option value="PENDING">MINOR NC</option>
                             </select>
                         </td>
-                        <td>
-                            <input type="text" id="evidence" name="evidence" value="" class="form-control">
-                        </td>
-                        <td><input type="text" id="note" name="note" value="" class="form-control"></td>
-                        <td><input type="file" class="form-control-file"></td>
+                        <td><input type="text" name="evidence[]" class="form-control"></td>
+                        <td><input type="text" name="note[]" class="form-control"></td>
+                        <td><input type="file" name="attachment[]" class="form-control-file"></td>
                     </tr>
                 </tbody>
             </table>
