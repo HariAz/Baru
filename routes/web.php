@@ -29,3 +29,7 @@ Route::get('table', function()
 {
 return View::make('audit_table');
 });
+Route::get('meeting', function()
+{
+return View::make('audit_meeting');
+});

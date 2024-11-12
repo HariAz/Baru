@@ -6,12 +6,18 @@
     <div id="page-content" class="container-fluid">
 
         <div id="mainContent">
-            <!-- Button Container -->
-            <div class="button-container">
-                <button class="btn btn-primary">Save</button>
-                <button class="btn btn-secondary">Add</button>
-                <button class="btn btn-light">Back</button>
+        {{-- <!-- Button Container -->
+        <div class="button-container">
+            <div class="info">
+                <label>Audit Plan No:</label>
+                <input type="text" id="audit_plan" name="audit_plan" value="" class="form-control" readonly>
+                <label>Audit Checklist No:</label>
+                <input type="text" id="audit_check" name="audit_check" value="" class="form-control" readonly>
             </div>
+            <button class="btn btn-primary">Save</button>
+            <button id="addRowBtn" class="btn btn-secondary">Add</button>
+            <button class="btn btn-light">Back</button>
+        </div> --}}
 
             <!-- Audit Table -->
             <div class="table-responsive">

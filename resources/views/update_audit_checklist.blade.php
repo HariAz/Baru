@@ -4,9 +4,10 @@
 
     <div id="page-content" class="container-fluid">
         <!-- Modal untuk Initial Screen -->
-        @include('include.initial-screen')
+        {{-- @include('include.initial-screen') --}}
         {{-- action="{{ route('audit.process') }}" --}}
-        <div id="mainContent" style="display: none;">
+        <div id="mainContent" >
+            {{-- style="display: none;" --}}
             <form class="audit-form" method="POST" >
                 @csrf <!-- Token CSRF untuk keamanan -->
 
@@ -55,9 +56,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
-                        <button type="submit" name="submit_action" value="submit" class="btn btn-primary">Submit</button>
-                        <button type="submit" name="submit_action" value="cancel" class="btn btn-secondary">Cancel</button>
+                    <div class="col-md-6">
+                        <button type="submit" name="submit_action" value="submit" class="btn btn-primary; form-control">Submit</button>
+                    </div>    
+                    <div class="col-md-6">
+                        <button type="submit" name="submit_action" value="cancel" class="btn btn-secondary; form-control">Cancel</button>
                     </div>
                 </div>
             </form>

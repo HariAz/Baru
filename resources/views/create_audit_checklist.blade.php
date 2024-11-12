@@ -3,7 +3,7 @@
 @section('content')
     <div id="page-content" class="container-fluid">
         <!-- Modal untuk Initial Screen -->
-        @include('include.initial-screen')
+         @include('include.initial-screen') 
         {{-- action="{{ route('proses_audit') }}" --}}
         <div id="mainContent" style="display: none;">
             <form class="audit-form" method="post" >
@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="subject">Subjek:</label>
-                        <input type="text" id="subject" name="subject" value="Internal Audit Airbus Helicopter" class="form-control" disabled><br>
+                        <input type="text-area" id="subject" name="subject" value="Internal Audit Airbus Helicopter" class="form-control" disabled><br>
                     </div>
                     <div class="col-md-6">
                         <label for="date_of_audit">Tanggal Audit:</label>
@@ -45,9 +45,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <button type="submit" name="submit_action" value="submit" class="form-control">Submit</button>
-                        <button type="submit" name="submit_action" value="cancel" class="form-control">Cancel</button>
+                    <div class="col-md-6">
+                        <button type="submit" name="submit_action" value="submit" class="btn btn-primary; form-control">Submit</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" name="submit_action" value="cancel" class="btn btn-secondary; form-control">Cancel</button>
                     </div>
                 </div>
             </form>
